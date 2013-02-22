@@ -1,0 +1,3 @@
+[submodule "MarketRatings"]
+	path = MarketRatings
+	url = git@github.com:DorkScript/hadoop-city-farmers-market-example.git
