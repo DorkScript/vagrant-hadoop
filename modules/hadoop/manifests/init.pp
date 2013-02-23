@@ -50,12 +50,13 @@ class hadoop {
     group => root,
     require => Exec["unpack_hadoop"]
   }
-   
-  file { "${hadoop_path}/conf/hdfs-site.xml":
-    source => "puppet:///modules/hadoop/hdfs-site.xml",
+
+  file { "hdfs-site":
+    path => "${hadoop_path}/conf/hdfs-site.xml",
     mode => 644,
     owner => root,
     group => root,
+    content => template("hadoop/hdfs-site.xml.erb"),
     require => Exec["unpack_hadoop"]
   }
    
@@ -91,5 +92,4 @@ class hadoop {
     group => root,
     require => Exec["unpack_hadoop"]
   }
-
 }
