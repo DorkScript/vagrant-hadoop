@@ -1,4 +1,7 @@
 include hadoop
+include vim
+
+Exec { path => [ "/bin" ] }
 
 group { "puppet":
   ensure => "present",
