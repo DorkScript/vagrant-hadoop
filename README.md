@@ -11,5 +11,3 @@ To start Hadoop cluster with Vagrant :
 - cd /opt/hadoop-1.1.1/bin
 - sudo ./hadoop namenode -format
 - sudo ./start-all.sh
-
-#forcing a change
